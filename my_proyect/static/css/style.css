@@ -8,14 +8,15 @@ body {
     display: grid;
     place-content: center;
     font-size: 3rem;
-    background-color: rgb(65, 100, 174);
-    color: rgb(114, 15, 15)
+    background-color: rgb(116, 163, 128);
+    color: rgb(28, 27, 27)
 }
 
 h1, p {
-    color: darkcyan
+    color: rgb(42, 49, 49)
 }
 
 nav {
-    display: flex, block;
+    display: flex;
+
 }

@@ -6,9 +6,20 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Post list</h1>
-    <p>check out my</p>
-{% endblock  %}
+  <h1>Post list</h1>
+  {% for post in posts %}
+    <article>
+      <h2>{{ post.title }}</h2>
+      <div>
+        <p>{{ post.body }}</p>
+      </div>
+      <div>
+        <span>{{ post.slug }}</span>
+        <span>{{ post.date }}</span>
+      </div>
+    </article>
+  {% endfor %}
+{% endblock %}
 
 {% block footer %}
   <h1>footer que no es por defecto</h1>
