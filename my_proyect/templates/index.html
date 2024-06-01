@@ -1,24 +1,12 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <script src=""></script>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/">HOME</a></li>
-            <li><a href="/about">abaut</a></li>
-            <li><a href="{% url 'post_list'%}">POST</a></li>
-        </ul>
-    </nav>
-    <h1 class="ff">Section home</h1>
-    <section>
+{% extends 'layout.html' %}
 
-    </section>
-</body>
-</html>
+{% block title %}
+  home
+{% endblock %}
+
+{% block content %}
+  <h1>home</h1>
+  <p>
+    check out my <a href="/about">about</a>page
+  </p>
+{% endblock %}

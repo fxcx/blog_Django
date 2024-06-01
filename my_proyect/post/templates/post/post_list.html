@@ -1,25 +1,15 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article post</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/post">post</a>
-            </li>
-        </ul>
-    </nav>
-    <h1> Article post</h1>
-    <section>
+{% extends 'layout.html' %}
 
-    </section>
-</body>
-</html>
+{% block title %}
+  post
+{% endblock %}
+
+{% block content %}
+    <h1>Post list</h1>
+    <p>check out my</p>
+{% endblock  %}
+
+{% block footer %}
+  <h1>footer que no es por defecto</h1>
+{% endblock %}

@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% block title %}
-        <title>Loyout</title>
-    {% endblock %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        Loyout
+      {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <script src="{% static 'js/main.js' %}" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <li><a href="/">home</a></li>
-        <li><a href="post">post</a></li>
-        <li><a href="about">about</a></li>
+      <li>
+        <a href="/">😊</a>
+      </li>
+      <li>
+        <a href="post">🍪</a>
+      </li>
+      <li>
+        <a href="about">🐲</a>
+      </li>
     </nav>
     <main>
-        {% block content %}{% endblock %}
+      {% block content %}
+      {% endblock %}
     </main>
     <footer>
-        {% block footer %}
-        si no se usa nada en el bloke esto se mostratra
-        por defecto
-        {% endblock %}
+      {% block footer %}
+        si no se usa nada en el bloke esto se mostratra por defecto
+      {% endblock %}
     </footer>
-</body>
+  </body>
 </html>

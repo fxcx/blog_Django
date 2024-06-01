@@ -8,14 +8,14 @@ body {
     display: grid;
     place-content: center;
     font-size: 3rem;
-    background-color: burlywood;
-    color: black
+    background-color: rgb(65, 100, 174);
+    color: rgb(114, 15, 15)
 }
 
 h1, p {
     color: darkcyan
 }
 
-.ff {
-    color: red
+nav {
+    display: flex, block;
 }
