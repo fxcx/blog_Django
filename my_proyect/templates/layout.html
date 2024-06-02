@@ -12,8 +12,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
     <script src="{% static 'js/main.js' %}" defer></script>
   </head>
-  <body>
-    <nav>
+  <body class="flex-container">
+    <nav class="flex-items">
       <li>
         <a href="/">Home 😊</a>
       </li>
@@ -24,11 +24,11 @@
         <a href="/about">About 🐲</a>
       </li>
     </nav>
-    <main>
+    <main class="flex-items">
       {% block content %}
       {% endblock %}
     </main>
-    <footer>
+    <footer class="flex-items">
       {% block footer %}
         si no se usa nada en el bloke esto se mostratra por defecto
       {% endblock %}
