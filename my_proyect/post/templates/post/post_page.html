@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block title %}
+  {{post.title}}
+{% endblock %}
+
+{% block content %}
+  <section>
+      <h1>{{post.title}}</h1>
+      <article>
+        <div>
+          <p>{{ post.body }}</p>
+        </div>
+        <div>
+          <span>{{ post.slug }}</span>
+          <span>{{ post.date }}</span>
+        </div>
+      </article>
+  </section>
+{% endblock %}
+
+{% block footer %}
+  <h1>footer que no es por defecto</h1>
+{% endblock %}
