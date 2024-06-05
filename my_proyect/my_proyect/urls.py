@@ -11,6 +11,8 @@ urlpatterns = [
     path('', views.home_page , name='index'),
     path('about/', views.about_page , name='about'),
     path('post/', include('post.urls')),
+    path('users/', include('users.urls'), name='user'),
+
 ] 
 
 urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
