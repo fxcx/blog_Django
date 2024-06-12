@@ -1,19 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
+
 
 # Create your views here.
 def register(request):
-    return render(request,'login/register.html')
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            message = f'{user.username}'
+            return redirect("users:login",{"message":message})
+        
+    form = UserCreationForm()
+
+    return render(request, "login/register.html", {"form": form})
+
 
 def login(request):
-    return render(request,'login/login.html')
-    
-def user(request):
-    # Definir una lambda para formatear el mensaje
-    format_message = lambda name: f"Usuario {name} registrado con éxito."
-
-    # Ejemplo de uso de la lambda
-    user_name = "Alice"  # Este valor vendría del request en una aplicación real
-    message = format_message(user_name)
-    
-    return render(request, 'user/profile.html', {'message': message})
+    return render(request, "login/login.html")
 

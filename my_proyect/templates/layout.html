@@ -15,14 +15,31 @@
   <body class="flex-container">
     <nav class="flex-items">
       <li>
-        <a href="/">Home 😊</a>
+        <a href="/"></a>
+        <span role="img" aria-label="home" title="home">🏠</span>
       </li>
       <li>
-        <a href="/post">Post 🍪</a>
+        <a href="/about">
+          <span role="img" aria-label="about" title="about">🐲</span>
+        </a>
       </li>
       <li>
-        <a href="/about">About 🐲</a>
+        <a href="{% url "posts:list" %}">
+          <span role="img" aria-label="post" title="POST">🪧</span>
+        </a>
       </li>
+      <li>
+        <a href="{% url "users:register" %}">
+          <span role="img" aria-label="post" title="register">📋</span>
+        </a>
+      </li>
+      <li>
+        <a href="{% url "users:login" %}">
+          <span role="img" aria-label="post" title="login">🔐</span>
+        </a>
+      </li>
+
+     
     </nav>
     <main class="flex-items">
       {% block content %}
