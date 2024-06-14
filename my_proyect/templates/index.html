@@ -4,9 +4,14 @@
   home
 {% endblock %}
 
+
 {% block content %}
-  <h1>home</h1>
-  <p>
-    check out my <a href="/about">about</a>page
-  </p>
+<h1>home</h1>
+{% if username %}
+  <p>Bienvenido, {{ username }}!</p>
+{% endif %}
+<p>
+  check out my <a href="/about">about</a>page
+</p>
+
 {% endblock %}
