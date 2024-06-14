@@ -6,12 +6,11 @@ from django.conf.urls.static import static
 
 from . import views
 
-app_name ='my_proyect'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home_page),
-    path('about/', views.about_page, name='about'),
+    path('about/', views.about_page),
 
     path('post/', include('post.urls')),
     path('', include('users.urls')),
